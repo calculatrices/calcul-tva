@@ -1,0 +1,223 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #005a9c; /* Bleu institutionnel français */
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    border-bottom: 5px solid #ffd700; /* Jaune pour contraster */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    color: #005a9c;
+    border-bottom: 2px solid #005a9c;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.calculator-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-group input[type="number"],
+.input-group select {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.input-group input[type="number"]:focus,
+.input-group select:focus {
+    border-color: #005a9c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 90, 156, 0.3);
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #007bff; /* Un bleu plus standard pour les actions */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#clear-btn {
+    background-color: #6c757d;
+}
+
+#clear-btn:hover {
+    background-color: #545b62;
+}
+
+.results-container {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #e9f5ff;
+    border: 1px solid #b3d7ff;
+    border-radius: 4px;
+}
+
+.results-container h3 {
+    margin-top: 0;
+    color: #005a9c;
+    font-size: 1.4rem;
+}
+
+.results-container p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.results-container p span {
+    font-weight: bold;
+    color: #000;
+}
+
+.error-message {
+    color: #d9534f; /* Rouge pour les erreurs */
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    padding: 0.8rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+
+#seo-content article {
+    margin-bottom: 1.5rem;
+}
+
+#seo-content h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+#seo-content p, #seo-content ul, #seo-content ol {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+#seo-content ul, #seo-content ol {
+    padding-left: 1.5rem;
+}
+
+#seo-content li {
+    margin-bottom: 0.5rem;
+}
+
+#seo-content strong {
+    color: #005a9c;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+    .calculator-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .input-group {
+        /* Allow some items to span if needed, but default is 1fr */
+    }
+
+    #calculate-btn, #clear-btn {
+        grid-column: span 1; /* Default behavior for buttons on wider screens */
+    }
+    
+    /* If we want buttons on their own row on wider screens for better layout: */
+    .calculator-container > button {
+        grid-column: 1 / -1; /* Span full width */
+    }
+    .calculator-container > .results-container {
+         grid-column: 1 / -1; /* Span full width */
+    }
+     .calculator-container > .error-message {
+         grid-column: 1 / -1; /* Span full width */
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    #seo-content h3 {
+        font-size: 1.3rem;
+    }
+}
+
